@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+/* App.css */
+
+.social-links {
+    display: flex;
+    justify-content: center;   /* center horizontally */
+    align-items: center;       /* align vertically */
+    gap: 1.5rem;               /* spacing between icons */
+    font-size: 2rem;           /* icon size */
+    margin: 2rem 0;            /* spacing around the bar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.social-links a {
+    color: #0077b5;               /* default icon color */
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;     /* remove underline */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.social-links a:hover {
+    color: #0077b5;            /* LinkedIn blue as hover example */
+    transform: scale(1.2);     /* slight zoom on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.social-links a:active {
+    transform: scale(1.1);     /* subtle press effect */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.social-links a.github:hover { color: #00ab6c; }        /* GitHub */
+.social-links a.linkedin:hover { color: #0077b5; }  /* LinkedIn */
+.social-links a.medium:hover { color: #00ab6c; }    /* Medium */
+.social-links a.stackoverflow:hover { color: #f48024; } /* Stack Overflow */
